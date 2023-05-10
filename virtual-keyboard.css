@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: Quicksand;
+    font-size: 62.5%;
+}
+
+:root {
+    --red-color: #B31B1B;
+    --red-hover:  #8B0000;
+    --yellow-color: #FFD700;
+    --yellow-hover:  #DAA520;
+    --blue-color: #0070FF;
+    --blue-hover:  #0047AB;
+    --green-color: #228B22;
+    --green-hover:  #355E3B;
+    --purple-color: #9400D3;
+    --purple-hover:  #6C3082;
+    --white-color: #FFFAF0;
+    --white-hover:  #E5E4E2;
+    --black-color: #36454F;
+    --black-hover:  #111111;
+    --black-font: #242124;
+    --white-font: #F8F8FF;
+    --white-textarea: ghostwhite;
+    --black-textarea: #1B1B1B;
+    --white-background: #222322;
+    --dark-background: whitesmoke;
+    --font-family: Lato;
+}
+
+.default {
+    --color: #36454F;
+    --hover: #111111;
+    --font: var(--white-font);
+    --textarea: var(--white-textarea);
+}
+
+.red {
+    --color: var(--red-color);
+    --hover: var(--red-hover);
+    --font: var(--white-font);
+    --textarea: var(--white-textarea);
+    --background: var(--black-background);
+}
+
+.yellow {
+    --color: var(--yellow-color);
+    --hover: var(--yellow-hover);
+    --font: var(--black-font);
+    --textarea: var(--black-textarea);
+    --background: var(--black-background);
+}
+
+.blue {
+    --color: var(--blue-color);
+    --background: var(--black-background);
+    --hover: var(--blue-hover);
+    --font: var(--white-font);
+    --textarea: var(--white-textarea);
+}
+
+.green {
+    --color: var(--green-color);
+    --background: var(--black-background);
+    --hover: var(--green-hover);
+    --font: var(--white-font);
+    --textarea: var(--white-textarea);
+}
+
+.purple {
+    --color: var(--purple-color);
+    --hover: var(--purple-hover);
+    --background: var(--black-background);
+    --font: var(--white-font);
+    --textarea: var(--white-textarea);
+}
+
+.white {
+    --color: var(--white-color);
+    --hover: var(--white-hover);
+    --font: var(--black-font);
+    --background: var(--white-background);
+    --textarea: var(--black-textarea);
+}
+
+.black {
+    --color: var(--black-color);
+    --hover: var(--black-hover);
+    --font: var(--white-font);
+    --background: var(--black-background);
+    --textarea: var(--white-textarea);
+}
+
+body {
+    background-color: var(--background);
+    font-size: 1.6rem;
+}
+
+/* CSS Styles for header */
+
+header {
+    text-align: center;
+    color: var(--color);
+}
+
+header h1 {
+    margin: 0 2rem;
+    padding: 2rem;
+    border-bottom: 2px solid grey;
+}
+
+/* CSS Styles for .color */
+
+.content .color {
+    display: flex;
+    gap: 3rem;
+    margin: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.color h3 {
+    color: var(--black-color);
+}
+
+.color #color-select {
+    height: 3rem;
+    width: 12rem;
+    border: 1px solid var(--color);
+    color: var(--color);
+    background-color: var(--textarea);
+}
+
+#color-select option {
+    color: var(--white-color);
+    vertical-align: middle;
+    zoom: 1.3;
+}
+
+#color-select option:first-child {
+    background-color: black;
+    opacity: 0.5;
+}
+
+#color-select option:nth-child(2) {
+    background-color: var(--red-color);
+}
+
+#color-select option:nth-child(3) {
+    background-color: var(--yellow-color);
+}
+#color-select option:nth-child(4) {
+    background-color: var(--blue-color);
+}
+#color-select option:nth-child(5) {
+    background-color: var(--green-color);
+}
+#color-select option:nth-child(6) {
+    background-color: var(--purple-color);
+}
+#color-select option:nth-child(7) {
+    background-color: var(--white-color);
+    color: var(--black-color);
+}
+#color-select option:nth-child(8) {
+    background-color: var(--black-color);
+}
+
+/* CSS Styles for .input */
+
+.input {
+    text-align: center;
+}
+
+.input textarea {
+    box-sizing: border-box;
+    width: 90vw;
+    height: 10rem;
+    border: 1px solid var(--color);
+    resize: none;
+    font-size: 1em;
+    font-family: var(--font-family), sans-serif;
+    font-weight: 400;
+    color: var(--color);
+    letter-spacing: 0.1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--textarea);
+    margin: 0;
+}
+
+#transparent {
+    height: 30vh;
+    background-color: transparent;
+}
+
+/* CSS Styles for #keyboard */
+
+#keyboard {
+    position: absolute;
+    background-color: var(--hover);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 5rem;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5vw;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s linear;
+}
+
+#keyboard .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 0.5vw;
+}
+
+#keyboard .row button {
+    width: min(6vw, 9vh);
+    height: min(6vw, 9vh);                                                                                                                                                                                          
+    background-color: var(--color);
+    color: var(--font);
+    border-radius: 0.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vw;
+    border: none;
+}
+
+#keyboard .row button:hover {
+    cursor: pointer;
+}
+
+#keyboard .row .key-long {
+    width: 12vw;
+} 
+
+#keyboard .row .key-super-long {
+    width: 40vw;
+} 
+
+.class-3 .caplock {
+    position: relative;
+}
+
+.class-3 #signal {
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 0.8rem;
+    background-color: var(--hover);
+    right: 1vw;
+    top: 1vw;
+}
+
+@media only screen and (max-width: 780px) {
+    #keyboard {
+        height: auto;
+        gap: 5px;
+    }
+    #keyboard .row{
+        gap: 1vw;
+        margin: 0 2vw;
+    }
+    #keyboard .row button {
+        width: 7vw;
+        height: 7vw;
+    }
+}
+
+@media only screen and (orientation: landscape) {
+    header {
+        display: none;
+    }
+}

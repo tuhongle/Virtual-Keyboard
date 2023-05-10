@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Virtual Keyboard w/ HTML, CSS & JS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="virtual-keyboard.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        <script defer src="virtual-keyboard.js"></script>
+    </head>
+    <body class="red">
+        <header>
+            <h1>Virtual Keyboard w/ HTML, CSS & JS</h1>
+        </header>
+        <main>
+            <section class="content">
+                <div class="color">
+                    <label for="color-select">
+                        <h3>Choose keyboard color</h3>
+                    </label>
+                    <select name="color" id="color-select">
+                        <option selected disabled>Choose color</option>
+                        <option value="red">Red</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                        <option value="purple">Purple</option>
+                        <option value="white">White</option>
+                        <option value="black">Black</option>
+                    </select>
+                </div>
+                <div class="input">
+                    <textarea id="input" name="input" placeholder="Click to display keyboard..." rows="3" columns="20" type="text" required></textarea>
+                </div>
+                <div id="transparent"></div>
+            </section>
+            <section id="keyboard">
+                <div class="row class-1">
+                    <button class="key no1">1</button>
+                    <button class="key no2">2</button>
+                    <button class="key no3">3</button>
+                    <button class="key no4">4</button>
+                    <button class="key no5">5</button>
+                    <button class="key no6">6</button>
+                    <button class="key no7">7</button>
+                    <button class="key no8">8</button>
+                    <button class="key no9">9</button>
+                    <button class="key no0">0</button>
+                    <button class="key-long backspace"><i class="fa-solid fa-lg fa-delete-left"></i></button>
+                </div>
+                <div class="row class-2">
+                    <button class="key q">q</button>
+                    <button class="key w">w</button>
+                    <button class="key e">e</button>
+                    <button class="key r">r</button>
+                    <button class="key t">t</button>
+                    <button class="key y">y</button>
+                    <button class="key u">u</button>
+                    <button class="key i">i</button>
+                    <button class="key o">o</button>
+                    <button class="key p">p</button>
+                </div>
+                <div class="row class-3">
+                    <button class="key-long caplock">
+                        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                        <div id="signal"></div>
+                    </button>
+                    <button class="key a">a</button>
+                    <button class="key s">s</button>
+                    <button class="key d">d</button>
+                    <button class="key f">f</button>
+                    <button class="key g">g</button>
+                    <button class="key h">h</button>
+                    <button class="key j">j</button>
+                    <button class="key k">k</button>
+                    <button class="key l">l</button>
+                    <button class="key-long enter"><i class="fa-solid fa-right-to-bracket"></i></button>
+                </div>
+                <div class="row class-4">
+                    <button class="key-long submit"><i class="fa-solid fa-lg fa-circle-check"></i></button>
+                    <button class="key z">z</button>
+                    <button class="key x">x</button>
+                    <button class="key c">c</button>
+                    <button class="key v">v</button>
+                    <button class="key b">b</button>
+                    <button class="key n">n</button>
+                    <button class="key m">m</button>
+                    <button class="key comma">,</button>
+                    <button class="key dot">.</button>
+                    <button class="key question">?</button>
+                </div>
+                <div class="row class-5">
+                    <button class="key-super-long space"><i class="fa-solid fa-lg fa-code"></i></button>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
